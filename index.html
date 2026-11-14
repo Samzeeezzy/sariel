@@ -30,6 +30,16 @@
     .collection-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.collection{position:relative;min-height:560px;overflow:hidden;background:#ddd}.collection img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.65,.2,1),filter 1.2s ease;filter:saturate(.92)}.collection:hover img{transform:scale(1.025);filter:saturate(1.04)}.collection:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent 65%)}.collection-content{position:absolute;z-index:1;bottom:40px;left:42px;color:white}.collection-content span{font-size:9px;letter-spacing:.25em;color:#e3c995}.collection-content h3{font:42px 'Playfair Display',serif;margin:12px 0}.collection-content a{font-size:10px;letter-spacing:.17em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:8px}
     .offer{background:var(--cream);padding:75px 20px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.offer .discount{font:clamp(58px,8vw,90px) 'Playfair Display',serif;color:var(--gold);margin:10px 0}.offer h2{font:32px 'Playfair Display',serif;font-weight:500;margin-bottom:12px}.offer p{font-size:13px;color:var(--muted);margin-bottom:25px}
     .story{display:grid;grid-template-columns:1fr 1fr;min-height:560px}.story-image{background:url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=85') center/cover;min-height:480px}.story-copy{padding:90px 13%;display:flex;flex-direction:column;justify-content:center}.story-copy h2{font:clamp(36px,4vw,52px)/1.15 'Playfair Display',serif;font-weight:500;margin:18px 0}.story-copy p{font-size:13px;line-height:2;color:var(--muted)}
+
+    .ceo-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .ceo-portrait{min-height:540px;margin:55px 0 55px 13%;background:linear-gradient(145deg,#d8c9ad,#8f7959);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .ceo-portrait:before{content:'S';font:clamp(150px,22vw,260px) 'Playfair Display',serif;color:rgba(255,255,255,.28)}
+    .ceo-portrait:after{content:'PORTRAIT TO BE ADDED';position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#fff;font-size:9px;letter-spacing:.25em}
+    .ceo-copy{padding:85px 14% 85px 10%;display:flex;flex-direction:column;justify-content:center}
+    .ceo-copy h2{font:clamp(38px,4.5vw,58px)/1.12 'Playfair Display',serif;font-weight:500;margin:18px 0}
+    .ceo-copy p{font-size:13px;line-height:2;color:var(--muted)}
+    .ceo-signature{font:italic 25px 'Playfair Display',serif;color:var(--gold);margin-top:12px}
+    @media(max-width:800px){.ceo-section{grid-template-columns:1fr}.ceo-portrait{min-height:390px;margin:35px 7% 0}.ceo-copy{padding:55px 9% 70px}}
     .details{background:var(--ink);color:var(--cream);padding:85px 7%;display:grid;grid-template-columns:repeat(3,1fr);gap:35px;text-align:center}.detail{padding:12px}.detail .symbol{font:28px 'Playfair Display',serif;color:var(--gold)}.detail h3{font:22px 'Playfair Display',serif;font-weight:500;margin:15px 0 9px}.detail p{font-size:12px;line-height:1.8;color:#b9b1a5;margin:0}
     .contact{padding:100px 20px;text-align:center}.contact h2{font:clamp(38px,5vw,58px) 'Playfair Display',serif;font-weight:500;margin:18px 0}.contact p{color:var(--muted);font-size:13px;line-height:2}.contact .button{margin-top:15px}
     footer{background:#100f0d;color:#eee7dc;padding:55px 7% 25px;text-align:center}.footer-brand{font:25px 'Playfair Display',serif;letter-spacing:.16em}.footer-tag{font-size:9px;color:var(--gold);letter-spacing:.3em;margin:8px 0 25px}.footer-links{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin:25px 0}.copyright{border-top:1px solid #39342d;padding-top:22px;color:#8e877d;font-size:10px}
@@ -79,6 +89,17 @@
     </section>
     <section class="offer reveal"><span class="eyebrow">A welcome from us</span><div class="discount">10% OFF</div><h2>Your first Sariel purchase</h2><p>Enjoy 10% off your first purchase. Send us a message to discover available pieces and place your order.</p><a class="button" href="https://wa.me/2348060029083?text=Hello%20Sariel%2C%20I%27d%20love%20to%20claim%20my%2010%25%20first-purchase%20discount.">Claim your welcome offer</a></section>
     <section class="story" id="story"><div class="story-image" role="img" aria-label="Luxury fragrance detail"></div><div class="story-copy reveal"><span class="eyebrow">The Sariel experience</span><h2>Elegance, <span class="italic">reimagined.</span></h2><p>SARIEL MAISON DE LUXE is a destination for those who love the finer details. Formerly known as Lemonde4perfumerie and Thriftbylussomoda, our evolving story brings fragrance and fashion together under one refined identity.</p><p>Explore new and pre-loved luxury bags. Please note that pre-loved pieces may show minor signs of use or imperfections; we are happy to share details before you order.</p><a class="button" href="https://wa.me/2348060029083">Speak with Sariel</a></div></section>
+    <section class="ceo-section" id="ceo">
+      <div class="ceo-portrait reveal" role="img" aria-label="CEO portrait placeholder"></div>
+      <div class="ceo-copy reveal">
+        <span class="eyebrow">The person behind the vision</span>
+        <h2>A vision shaped by <span class="italic">elegance.</span></h2>
+        <p>At the heart of SARIEL MAISON DE LUXE is a passion for timeless style, thoughtful curation and the little details that make every experience special.</p>
+        <p>As CEO, Sariel leads the brand with a commitment to bringing together beautiful fragrances and carefully selected luxury bags, while creating a welcoming and personal experience for every customer.</p>
+        <div class="ceo-signature">Sariel</div>
+        <span class="eyebrow" style="margin-top:7px">Chief Executive Officer · SARIEL MAISON DE LUXE</span>
+      </div>
+    </section>
     <section class="details">
       <div class="detail reveal"><div class="symbol">✧</div><h3>Curated Luxury</h3><p>Signature scents and thoughtfully selected bags for your personal style.</p></div>
       <div class="detail reveal"><div class="symbol">⌖</div><h3>Nationwide Delivery</h3><p>Shop from anywhere in Nigeria. We deliver nationwide.</p></div>
