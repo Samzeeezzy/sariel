@@ -14,7 +14,7 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
     .announcement{background:var(--gold);color:#171512;text-align:center;padding:10px 16px;font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:700}
     header{height:86px;display:flex;align-items:center;justify-content:space-between;padding:0 6.5%;background:rgba(251,249,244,.96);position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
-    .brand{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:.14em;font-weight:600}.brand small{display:block;font:9px 'DM Sans',sans-serif;letter-spacing:.34em;color:var(--gold);margin-top:4px;text-align:center}
+    .brand-logo{display:flex;align-items:center;flex-shrink:0;height:82px;width:100px;overflow:hidden}.brand-logo img{display:block;width:100%;height:100%;object-fit:contain}.footer-logo{display:block;width:138px;height:138px;object-fit:contain;margin:0 auto 12px}
     nav{display:flex;gap:30px;align-items:center;font-size:11px;letter-spacing:.13em;text-transform:uppercase}nav a{position:relative;transition:color .45s ease}nav a:after{content:'';position:absolute;left:0;bottom:-8px;width:0;height:1px;background:var(--gold);transition:width .45s ease}nav a:hover{color:var(--gold)}nav a:hover:after{width:100%}
     .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;padding:14px 22px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--ink);transition:.3s}.nav-cta:hover,.button:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px)}
     .menu{display:none;background:none;border:0;font-size:24px}
@@ -49,14 +49,14 @@
     .reveal{opacity:0;transform:translate3d(0,18px,0);filter:blur(2px);transition:opacity 1.05s cubic-bezier(.2,.7,.2,1),transform 1.05s cubic-bezier(.2,.7,.2,1),filter 1.05s ease;will-change:opacity,transform}.reveal.visible{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
     @keyframes softArrive{from{opacity:0;transform:translate3d(0,16px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
     @keyframes photoArrive{from{opacity:.55;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
-    @media(max-width:800px){header{height:75px;padding:0 5%}.menu{display:block}nav{display:none;position:absolute;top:75px;left:0;right:0;background:var(--paper);padding:25px;flex-direction:column;gap:22px;border-bottom:1px solid var(--line)}nav.open{display:flex}.nav-cta{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:85px 8%}.hero-image{min-height:440px}.collection-grid,.story{grid-template-columns:1fr}.collection{min-height:490px}.story-image{order:2}.story-copy{padding:75px 9%}.details{grid-template-columns:1fr;gap:25px}.intro{padding:75px 8%}.collections{padding:20px 5% 75px}}
+    @media(max-width:800px){header{height:82px;padding:0 5%}.brand-logo{height:76px;width:92px}.menu{display:block}nav{display:none;position:absolute;top:75px;left:0;right:0;background:var(--paper);padding:25px;flex-direction:column;gap:22px;border-bottom:1px solid var(--line)}nav.open{display:flex}.nav-cta{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:85px 8%}.hero-image{min-height:440px}.collection-grid,.story{grid-template-columns:1fr}.collection{min-height:490px}.story-image{order:2}.story-copy{padding:75px 9%}.details{grid-template-columns:1fr;gap:25px}.intro{padding:75px 8%}.collections{padding:20px 5% 75px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;filter:none;transition:none}*{animation:none!important;transition:none!important}}
   </style>
 </head>
 <body>
   <div class="announcement">A little luxury, a lasting impression — enjoy 10% off your first purchase</div>
   <header>
-    <a class="brand" href="#home">SARIEL MAISON DE LUXE<small>WHERE LUXURY MEETS ELEGANCE</small></a>
+    <a class="brand-logo" href="#home" aria-label="SARIEL MAISON DE LUXE"><img src="assets/sariel-logo.webp" alt="SARIEL MAISON DE LUXE logo"></a>
     <button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav>
       <a href="#home">Home</a><a href="#collections">Collections</a><a href="#story">Our Story</a><a href="#contact">Contact</a>
@@ -110,7 +110,7 @@
     </section>
     <section class="contact" id="contact"><span class="eyebrow">Your next favourite is waiting</span><h2>Make it <span class="italic">Sariel.</span></h2><p>Visit us at XCV3+4MJ, Lugbe 900107, Federal Capital Territory, Nigeria.<br>For enquiries and orders: +234 806 002 9083</p><a class="button gold" href="https://wa.me/2348060029083">DM to order on WhatsApp</a></section>
   </main>
-  <footer><div class="footer-brand">SARIEL MAISON DE LUXE</div><div class="footer-tag">HOME OF SARIEL PARFUMS &amp; SARIEL LUXE BAG</div><p style="font:italic 16px 'Playfair Display',serif;color:#c2b59e">Where Luxury Meets Elegance</p><div class="footer-links"><a href="#home">Home</a><a href="#collections">Collections</a><a href="#story">Our Story</a><a href="https://chat.whatsapp.com/HRX773X1CkT7YZqd5eaM2g">WhatsApp Community</a></div><div class="copyright">© <span id="year"></span> SARIEL MAISON DE LUXE. All rights reserved.<br><span class="developer-credit">Developed by <strong>SamKonceptz Enterprise</strong> · <a href="tel:+2347068860965">+234 706 886 0965</a></span></div></footer>
+  <footer><img class="footer-logo" src="assets/sariel-logo.webp" alt="SARIEL MAISON DE LUXE logo"><div class="footer-tag">HOME OF SARIEL PARFUMS &amp; SARIEL LUXE BAG</div><p style="font:italic 16px 'Playfair Display',serif;color:#c2b59e">Where Luxury Meets Elegance</p><div class="footer-links"><a href="#home">Home</a><a href="#collections">Collections</a><a href="#story">Our Story</a><a href="https://chat.whatsapp.com/HRX773X1CkT7YZqd5eaM2g">WhatsApp Community</a></div><div class="copyright">© <span id="year"></span> SARIEL MAISON DE LUXE. All rights reserved.<br><span class="developer-credit">Developed by <strong>SamKonceptz Enterprise</strong> · <a href="tel:+2347068860965">+234 706 886 0965</a></span></div></footer>
   <a class="whatsapp" href="https://wa.me/2348060029083" target="_blank" rel="noopener">◉ &nbsp; Chat with us</a>
   <script>
     const menu=document.querySelector('.menu'),nav=document.querySelector('nav');
